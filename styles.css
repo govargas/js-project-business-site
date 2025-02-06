@@ -5,8 +5,8 @@ body {
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
   /* Noise texture */
   display: flex;
-  width: 100;
-  height: 100;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   flex-direction: column;
 }
@@ -19,6 +19,7 @@ body {
   padding: 10px;
   background: #EFE7DD;
   position: relative;
+  z-index: 99999;
 }
 
 .nav-links a {
@@ -81,7 +82,7 @@ body {
   top: 50px;
   /* Adjust as needed */
   right: 0;
-  background: white;
+  background: #EFE7DD;
   width: 100%;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -114,15 +115,22 @@ body {
 }
 
 h1 {
-  color: black
+  color: black;
+}
+
+h2 {
+  font-family: "Urbanist", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 20px;
+  font-style: normal;
 }
 
 /* Hero section: Full-screen background */
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: url('kaffecolombia01.jpg');
-  /* Change to your actual image */
+  background-image: url('./kaffecolombia01.jpg');
   background-size: cover;
   background-position: center center;
   /* Centered by default */
@@ -141,6 +149,8 @@ h1 {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   grid-template-columns: 1fr;
   /* Default: One column (Mobile) */
+  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); What Matilda showed us on the Codealong */
+
 }
 
 /* Card styling */
@@ -148,22 +158,84 @@ h1 {
   background: #EFE7DD;
   /* Same as body background */
   padding: 20px;
+  opacity: 90%;
   text-align: center;
-  font-family: "Urbanist", serif;
+  font-family: "Host Grotesk", serif;
   font-weight: 600;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0px;
+}
+
+.card p {
+  font-weight: 200 !important;
+  /* Ensures all text inside .card is not bold */
 }
 
 .card-text {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 200;
-  font-size: 20px;
+  font-family: "Host Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 200 !important;
+  font-style: normal;
   line-height: 1.5;
   margin-top: 10px;
   /* Optional: adds spacing between the title and text */
-  color: black
-    /* Adjust color if necessary */
+  color: black;
+  /* Adjust color if necessary */
+}
+
+.card-text a {
+  color: inherit;
+  /* Keeps the text color the same as surrounding text */
+  text-decoration: none;
+  /* Optional: Ensures no underline */
+}
+
+.card-text a:visited {
+  color: inherit;
+  /* Prevents color change after clicking */
+}
+
+/* Apply a different layout ONLY for menu.html */
+.menu-page .cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh;
+  Full screen height */
+  height: calc(100vh - 60px);
+  /* Prevent it from being hidden */
+  padding: 20px;
+}
+
+/* Single card should take up the whole screen width */
+.menu-page .card {
+  background: rgba(239, 231, 221, 0.95);
+  /* Slight transparency to show background */
+  padding: 40px;
+  width: 80%;
+  height: auto;
+  /* Adjust height based on content */
+  max-height: calc(100vh - 80px);
+  /* Ensure it fits inside the viewport */
+  text-align: center;
+  /* font-family: "Urbanist", serif; */
+  /* font-weight: 600; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-y: auto;
+  /* Scroll if content is too long */
+}
+
+/* Make text inside the menu scrollable if necessary */
+.menu-page .card-text {
+  /* font-family: "Urbanist", sans-serif; */
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+  max-height: 80vh;
+  /* Prevent overflowing */
+  overflow-y: auto;
 }
 
 /* Tablets */
@@ -179,13 +251,19 @@ h1 {
   .cards-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .menu-page .card {
+    width: 60%;
+  }
 }
+
 
 /* Desktops, large screens */
 @media (min-width: 1024px) {
   h1 {
     color: black
   }
+
 
   .navbar {
     padding: 10px;
@@ -227,5 +305,9 @@ h1 {
 
   .cards-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .menu-page .card {
+    width: 50%;
   }
 }
