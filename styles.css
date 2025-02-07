@@ -1,9 +1,12 @@
 /* Mobile first (default, minimum width 320 px, iPhone 5/SE) */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #EFE7DD;
-  /* Base concrete-like color */
-  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-  /* Noise texture */
   display: flex;
   width: 100%;
   height: 100%;
@@ -18,7 +21,10 @@ body {
   align-items: center;
   padding: 10px;
   background: #EFE7DD;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 99999;
 }
 
@@ -37,13 +43,24 @@ body {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-size: 24px;
+  font-size: 18px;
+  width: 100%;
+  /* Make the element span the full width */
+  text-align: center;
+  /* Center the text */
+  white-space: nowrap;
+  /* Prevent text from wrapping to a new line */
 }
 
 /* CSS-made Flag container */
 .colombiaflag {
-  width: 40px;
-  height: 30px;
+  width: 100%;
+  max-width: 30px;
+  /* Maximum width you want for the flag */
+  aspect-ratio: 3 / 2;
+  /* Maintains a 3:2 width-to-height ratio */
+  height: auto;
+  /* Let the aspect ratio control the height */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -102,6 +119,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   user-select: none;
+  margin-right: 15px;
 }
 
 /* Hide checkbox (used for CSS-only menu toggle) */
@@ -138,19 +156,28 @@ h2 {
   position: relative;
 }
 
+/* New Background Section for 02.jpg */
+.new-background {
+  background: url('./kaffecolombia02.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  /* Same as your hero section */
+}
+
 /* Cards container: Hidden by default */
 .cards-container {
   display: grid;
   gap: 20px;
   padding: 20px;
   opacity: 1;
-  transform: translateY(0);
-  /* Start slightly below */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   grid-template-columns: 1fr;
   /* Default: One column (Mobile) */
   /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); What Matilda showed us on the Codealong */
-
+  position: absolute;
+  /* Use sticky instead of fixed */
+  top: 80px;
+  /* Adjust so it sits just below the navbar */
+  z-index: 9998;
 }
 
 /* Card styling */
@@ -158,7 +185,7 @@ h2 {
   background: #EFE7DD;
   /* Same as body background */
   padding: 20px;
-  opacity: 85%;
+  opacity: 88%;
   text-align: center;
   font-family: "Host Grotesk", serif;
   font-weight: 600;
@@ -202,8 +229,6 @@ h2 {
   align-items: center;
   /* height: 100vh;
   Full screen height */
-  height: calc(100vh - 60px);
-  /* Prevent it from being hidden */
   padding: 20px;
 }
 
@@ -215,14 +240,12 @@ h2 {
   width: 80%;
   height: auto;
   /* Adjust height based on content */
-  max-height: calc(100vh - 80px);
-  /* Ensure it fits inside the viewport */
   text-align: center;
   /* font-family: "Urbanist", serif; */
   /* font-weight: 600; */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   /* Scroll if content is too long */
 }
 
@@ -236,6 +259,12 @@ h2 {
   max-height: 80vh;
   /* Prevent overflowing */
   overflow-y: auto;
+}
+
+.menu-page .hero {
+  height: auto;
+  min-height: 100vh;
+  /* Optional: ensure it’s at least full viewport height */
 }
 
 /* Tablets */
@@ -296,6 +325,7 @@ h2 {
     margin-right: 20px;
     padding: 0;
     text-align: left;
+    white-space: nowrap;
   }
 
   .hero {
