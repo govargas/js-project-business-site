@@ -32,27 +32,35 @@
         <a href="#">ABOUT US</a>
         <a href="./menu.html">MENU</a>
         <a href="#">PRODUCTS</a>
-        <a href="#">CONTACT</a>
+        <a href="./contact.html">CONTACT</a>
       </div>
     </nav>
 
-    <!-- Hero section with background image -->
+    <!-- Hero section with background video -->
     <section class="hero">
+      <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="background-video">
+        <source src="./kitchen.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
       <section class="cards-container">
         <div class="card">
           <h2>About Us</h2>
           <p class="card-text">At <strong>Kaffe Colombia Express</strong>, Colombian cuisine meets tradition. Nestled in
             Hökarängen, south of Stockholm, we serve artisanal coffee, Latin American pastries, and specialty goods. A
-            warm, inviting space to enjoy authentic flavors and handcrafted delicacies.
-          </p>
+            warm, inviting space to enjoy authentic flavors and handcrafted delicacies.</p>
         </div>
         <div class="card">
           <h2>Menu</h2>
           <p class="card-text">
             Explore the flavors of Colombia through a menu rooted in tradition. From delicate pastries to hearty Bandeja
             Paisa, each dish is crafted with care and authenticity. Let every bite take you on a culinary journey.
-            <strong><br><a href="./menu.html">Read our menu here.</a></strong>
-          </p>
+            <strong><br><a href="./menu.html">Read our menu here.</a></strong></p>
         </div>
         <div class="card">
           <h2>Products</h2>
@@ -61,25 +69,13 @@
             artisanal sauces from Mexico, traditional
             flours, or sweet indulgences from Chile. Discover the flavors that connect cultures, crafted for those who
             appreciate
-            authenticity. </p>
+            authenticity.</p>
         </div>
         <div class="card">
           <h2>Contact</h2>
-          <p class="card-text">Hökarängsplan 5, Farsta<br>
-            Hökarängen subway station (green line towards Farsta Strand)</p>
-
-          <p>Telephone<br>
-            08-777 38 11</p>
-
-          <p>Monday - Tuesday:<br> 9:00 AM - 5:30 PM<br>
-            Friday - Saturday:<br> 12:00 PM - 7:30 PM<br>
-            Sunday:<br> 12:00 PM - 6:00 PM</p>
-          <!-- Instagram Icon -->
-          <div class="instagram-link">
-            <a href="https://www.instagram.com/kaffeexpresscolombia/" target="_blank">
-              <img src="./insta.png" alt="Instagram" class="instagram-icon">
-            </a>
-          </div>
+          <p class="card-text">
+            We always strive to provide the best experience and products to our customers.<br> 
+            If you have any questions, suggestions, or comments, please contact us by <strong><br><a href="./contact.html">filling out this Contact form.</a></strong></p>
         </div>
       </section>
     </section>
@@ -88,6 +84,28 @@
     <section class="new-background"></section>
 
   </div>
+
+  <footer>
+    <div class="footer-column">
+      <p>Hökarängsplan 5, Farsta</p>
+      <p>Hökarängen subway station</p>
+      <p>(green line towards Farsta Strand)</p>
+    </div>
+
+    <div class="footer-column">
+      <p>Monday - Tuesday: 9:00 AM - 5:30 PM</p>
+      <p>Friday - Saturday: 12:00 PM - 7:30 PM</p>
+      <p>Sunday: 12:00 PM - 6:00 PM</p>
+    </div>
+
+    <div class="footer-column">
+      <p>Tel: 08-777 38 11</p>
+      <a href="https://www.instagram.com/kaffeexpresscolombia/" target="_blank">
+        <img src="./insta.svg" alt="Instagram" class="instagram-icon">
+      </a>
+    </div>
+  </footer>
+
 </body>
 
 </html>
