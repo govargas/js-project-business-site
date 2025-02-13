@@ -182,16 +182,6 @@ h2 {
   z-index: 0;
 }
 
-
-
-/* New Background Section for 02.jpg */
-.new-background {
-  background: url('./kaffecolombia02.jpg') no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  /* Same as your hero section */
-}
-
 /* Cards container: Hidden by default */
 .cards-container {
   display: grid;
@@ -206,6 +196,36 @@ h2 {
   /* Use sticky instead of fixed */
   /* top: 80px; */
   /* Adjust so it sits just below the navbar */
+}
+
+.card.main-card {
+  grid-column: 1 / -1; /* span across all columns */
+  background: rgba(255, 255, 255, 0.1); /* glass effect */
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+  
+  /* Center content vertically & horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 40px;
+  min-height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+.card.main-card h2 {
+  font-size: 3em; /* Adjust to your desired size, e.g. 48px */
+  color: white;   /* Ensures the title is white */
+  margin-bottom: 20px; /* Adds some space below the title */
+}
+
+.card.main-card p {
+  font-size: 1.5em; /* Increase this value as needed for larger text */
+  color: white;     /* Ensures the paragraph text is white */
 }
 
 /* Card styling */
@@ -367,12 +387,12 @@ h2 {
   margin-right: 5px;
 }
 
-
 .newsletter {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 8px;
+  flex-direction: row; /* Ensures elements stay in a row */
 }
 
 .newsletter input[type="checkbox"] {
@@ -403,7 +423,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: static;
   bottom: 0;
   background: rgba(239, 231, 221, 1); 
   width: 100%;
@@ -454,6 +474,10 @@ footer {
     width: 80%; /* Makes it wider but keeps margins */
     max-width: 700px;
     padding: 30px;
+  }
+
+  footer {
+    position: fixed;
   }
 }
 
@@ -515,6 +539,10 @@ footer {
     width: 70%;
     max-width: 900px;
     padding: 40px;
+  }
+
+  footer {
+    position: fixed;
   }
 
 }
