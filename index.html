@@ -1,110 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <title>Kaffe Colombia Express</title>
-</head>
-
-<body>
-  <div class="main_container">
-    <nav class="navbar">
-      <div class="colombiaflag">
-        <div class="yellow"></div>
-        <div class="blue"></div>
-        <div class="red"></div>
-      </div>
-      <h1 class="titel">KAFFE COLOMBIA EXPRESS</h1>
-
-      <!-- Hamburger menu label -->
-      <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-      <label for="menu-toggle" class="menu-icon">☰</label>
-
-      <!-- Navigation links -->
-      <div class="nav-links">
-        <a href="#">ABOUT US</a>
-        <a href="./menu.html">MENU</a>
-        <a href="#">PRODUCTS</a>
-        <a href="./contact.html">CONTACT</a>
-      </div>
-    </nav>
-
-    <!-- Hero section with background video -->
-    <section class="hero">
-      <video
-      autoplay
-      loop
-      muted
-      playsinline
-      class="background-video">
-        <source src="./kitchen.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="hero-overlay"></div>
-      <section class="cards-container">
-        <div class="card main-card">
-          <h2>A taste of Colombia in Stockholm</h2>
-          <p class="card-text">At <strong>Kaffe Colombia Express</strong>, tradition and craftsmanship come together.<br>
-            Nestled in Hökarängen, we serve home-style Colombian dishes, Latin American pastries, and carefully curated specialty goods.<br>
-            A welcoming space where every sip and bite tells a story.</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      crossorigin
+      href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" 
+      rel="stylesheet">
+    <title>Kaffe Colombia Express</title>
+  </head>
+  <body>
+    <div class="main_container">
+      <nav class="navbar">
+        <div class="colombiaflag">
+          <div class="yellow"></div>
+          <div class="blue"></div>
+          <div class="red"></div>
         </div>
-        <div class="card">
-          <h2>Menu</h2>
-          <p class="card-text">
-            Explore a menu rooted in tradition—comforting home-cooked meals, delicate pastries, and hearty dishes like Bandeja Paisa. Every plate is a tribute to the rich culinary heritage of Colombia.
-            <strong><br><a href="./menu.html">Discover the full menu here.</a></strong></p>
+        <h1 class="titel">KAFFE COLOMBIA EXPRESS</h1>
+        <!-- Hamburger menu label -->
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-checkbox">
+        <label
+          for="menu-toggle"
+          class="menu-icon">
+          ☰
+        </label>
+        <!-- Navigation links -->
+        <div class="nav-links">
+          <a href="#">about us</a>
+          <a href="./menu.html">menu</a>
+          <a href="#">products</a>
+          <a href="./contact.html">contact</a>
         </div>
-        <div class="card">
-          <h2>Products</h2>
-          <p class="card-text">
-            We carefully select and import a range of regional specialties—from rich yerba mate from Uruguay and Argentina to handcrafted Mexican sauces, fine flours, and Chilean confections—our selection brings Latin America's finest ingredients to your table.</p>
-        </div>
-        <div class="card">
-          <h2>Gallery</h2>
-          <p class="card-text">
-            Discover snapshots of our journey and the vibrant culture behind our flavors. Stay tuned for updates!
-          </p>
-        </div>
-        <div class="card">
-          <h2>Contact</h2>
-          <p class="card-text">
-            We always strive to provide the best experience and products to our customers.<br> 
-            If you have any questions, suggestions, or comments, please contact us by <strong><br><a href="./contact.html">filling out this Contact form.</a></strong></p>
-        </div>
+      </nav>
+      <!-- Hero section with background video -->
+      <section class="hero">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="background-video">
+          <source
+            src="./kitchen.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <section class="cards-container">
+          <div class="card main-card">
+            <h2>A taste of<br>Colombia<br>in Stockholm</h2>
+            <p class="card-text">
+              At <strong><span class="urbanist">KAFFE COLOMBIA EXPRESS</span></strong>, tradition and craftsmanship come together.<br>
+              Nestled in Hökarängen, we serve home-style Colombian dishes, Latin American pastries, and carefully curated specialty goods.<br>
+              A welcoming space where every sip and bite tells a story.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Menu</h3>
+            <p class="card-text">
+              Explore a menu rooted in tradition—comforting home-cooked meals, delicate pastries, and hearty dishes like Bandeja Paisa. Every plate is a tribute to the rich culinary heritage of Colombia.
+              <strong>
+                <br>
+                <a href="./menu.html">Discover the full menu here.</a>
+              </strong>
+            </p>
+          </div>
+          <div class="card">
+            <h3>Products</h3>
+            <p class="card-text">
+              We carefully select and import a range of regional specialties—from rich yerba mate from Uruguay and Argentina to handcrafted Mexican sauces, fine flours, and Chilean confections—our selection brings Latin America's finest ingredients to your table.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Gallery</h3>
+            <p class="card-text">
+              Discover snapshots of our journey and the vibrant culture behind our flavors. Stay tuned for updates!
+            </p>
+          </div>
+          <div class="card">
+            <h3>Contact</h3>
+            <p class="card-text">
+              We always strive to provide the best experience and products to our customers.<br>
+              If you have any questions, suggestions, or comments, please contact us by <strong>
+                <br>
+                <a href="./contact.html">filling out this Contact form.</a>
+              </strong>
+            </p>
+          </div>
+        </section>
       </section>
-    </section>
-    <!-- Cards section -->
-
-  </div>
-
-  <footer>
-    <div class="footer-column">
-      <p>Hökarängsplan 5, Farsta</p>
-      <p><img src="tunnelbana_icon.svg" alt="Tunnelbana logo" class="tunnelbana-icon">
-        Hökarängen</p>
+      <!-- Cards section -->
     </div>
-
-    <div class="footer-column">
-      <p>Monday - Tuesday: 9:00 AM - 5:30 PM</p>
-      <p>Friday - Saturday: 12:00 PM - 7:30 PM</p>
-      <p>Sunday: 12:00 PM - 6:00 PM</p>
-    </div>
-
-    <div class="footer-column">
-      <p>Tel: 087773811</p>
-      <a href="https://www.instagram.com/kaffeexpresscolombia/" target="_blank">
-        <img src="./insta.svg" alt="Instagram" class="instagram-icon">
-      </a>
-    </div>
-  </footer>
-
-</body>
-
+    <footer>
+      <div class="footer-column">
+        <p>Hökarängsplan 5, Farsta</p>
+        <p>
+          <img
+            src="tunnelbana_icon.svg"
+            alt="Tunnelbana logo"
+            class="tunnelbana-icon">
+          Hökarängen
+        </p>
+      </div>
+      <div class="footer-column">
+        <p>Monday - Tuesday: 9:00 AM - 5:30 PM</p>
+        <p>Friday - Saturday: 12:00 PM - 7:30 PM</p>
+        <p>Sunday: 12:00 PM - 6:00 PM</p>
+      </div>
+      <div class="footer-column">
+        <p>Tel: 087773811</p>
+        <a
+          href="https://www.instagram.com/kaffeexpresscolombia/"
+          target="_blank">
+          <img
+            src="./insta.svg"
+            alt="Instagram"
+            class="instagram-icon">
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>

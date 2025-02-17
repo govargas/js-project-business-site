@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background: #EFE7DD;
+  background: #f1eae2;
   display: flex;
   width: 100%;
   height: 100%;
@@ -23,26 +23,18 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  /* Fully transparent */
+  /* background: rgba(239, 231, 221, 0); */
   /* background: #EFE7DD; */
   /* Semi-transparent background */
-  background: rgba(239, 231, 221, 0.8); 
-  /* background: rgba(239, 231, 221, 0); Fully transparent */
-  backdrop-filter: blur(10px); /* Optional: Adds a glass effect */
+  background: rgba(0, 0, 0, 0.4); 
+  /* Optional: Adds a glass effect */
+  backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99999;
-}
-
-.nav-links a {
-  font-family: "Urbanist", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  color: black;
-  margin-right: 20px;
 }
 
 .titel {
@@ -51,6 +43,7 @@ body {
   font-weight: 800;
   font-style: normal;
   font-size: 18px;
+  color: #f1eae2;
   flex-grow: 1;
   text-align: center;
   /* Center the text */
@@ -103,18 +96,25 @@ body {
   flex-direction: column;
   position: absolute;
   top: 50px;
-  /* Adjust as needed */
   right: 0;
-  background: #EFE7DD;
-  width: 100%;
+  /* background: #000000; */
+  /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.7);  
+  /* Optional: Adds a glass effect */
+  /* backdrop-filter: blur(5px); */
+  width: 50%;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style navigation links */
 .nav-links a {
+  font-family: "Urbanist", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   text-decoration: none;
-  color: black;
+  margin-right: 20px;
+  color: #f1eae2;
   display: block;
   padding: 10px;
   text-align: center;
@@ -125,6 +125,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   user-select: none;
+  color: #f1eae2;
 }
 
 /* Hide checkbox (used for CSS-only menu toggle) */
@@ -143,12 +144,20 @@ h1 {
 }
 
 h2 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1; /* Adjust this value to control spacing */
+  margin: 0; 
+  text-decoration: none;
+}
+
+.urbanist {
   font-family: "Urbanist", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 800;
   font-style: normal;
-  text-decoration: none;
+  font-size: 22px;
 }
 
 /* Hero section: Full-screen background video */
@@ -214,21 +223,27 @@ h2 {
 }
 
 .card.main-card {
-  grid-column: 1 / -1; /* span across all columns */
-  background: rgba(255, 255, 255, 0.1); /* glass effect */
-  backdrop-filter: blur(10px);
-  color: rgb(255, 255, 255);
+  /* span across all columns */
+  grid-column: 1 / -1;
+  /* transparent */
+  background: transparent;
+  /* glass effect */
+  /* background: rgba(255, 255, 255, 0.1);  */
+  /* blur */
+  /* backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255); */
   text-align: center;
   /* Center content vertically & horizontally */
   display: flex;
   flex-direction: column;
+  opacity: 1;
+  box-shadow: none;
   justify-content: center;
   align-items: center;
   padding: 20px;
   min-height: 300px;
   position: relative;
   z-index: 1;
-  
   /* Ensure the card doesn’t exceed the viewport width */
   width: 100%;
   max-width: 100%;
@@ -237,18 +252,18 @@ h2 {
 
 .card.main-card h2 {
   font-size: 4em; /* Adjust to your desired size, e.g. 48px */
-  color: white;   /* Ensures the title is white */
+  color: #f1eae2;;   /* Ensures the title is white */
   margin-bottom: 20px; /* Adds some space below the title */
 }
 
 .card.main-card p {
   font-size: 1.5em; /* Increase this value as needed for larger text */
-  color: white;     /* Ensures the paragraph text is white */
+  color: #f1eae2;;     /* Ensures the paragraph text is white */
 }
 
 /* Card styling */
 .card {
-  background: #EFE7DD;
+  background: #f1eae2;
   /* Same as body background */
   padding: 20px;
   opacity: 88%;
@@ -257,11 +272,6 @@ h2 {
   font-weight: 600;
   border-radius: 1px;
   box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.5);
-}
-
-.card p {
-  font-weight: 200 !important;
-  /* Ensures all text inside .card is not bold */
 }
 
 .card-text {
@@ -322,6 +332,12 @@ h2 {
   overflow-y: auto;
 }
 
+h3 {
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
 .menu-page .hero {
   height: auto;
   min-height: 100vh;
@@ -380,7 +396,7 @@ h2 {
 .contact-form textarea:focus {
   outline: none;
   border: 2px solid #FF7F50;       /* Change border color (e.g., coral) */
-  background-color: #FFF5EE;        /* Change background color when activated */
+  background-color: #f1eae2;        /* Change background color when activated */
   box-shadow: 0 0 8px rgba(255, 127, 80, 0.6); /* Glow effect */
   transition: all 0.3s ease;        /* Smooth transition for the effect */
 }
@@ -469,7 +485,8 @@ footer {
   height: 1rem;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 0.3em; /* Adjust spacing as needed */
+  position: relative;
+  top: -2px;
 }
 
 /* Instagram icon */
@@ -486,10 +503,6 @@ footer {
     font-size: 24px;
   }
 
-  h1 {
-    color: black
-  }
-
   .cards-container {
     grid-template-columns: 1fr 1fr;
     margin-top: 20px;
@@ -497,6 +510,7 @@ footer {
 
   .menu-page .card {
     width: 60%;
+    max-width: 1024px;
   }
 
   .contact-page .card {
@@ -509,11 +523,6 @@ footer {
 
 /* Desktops, large screens */
 @media (min-width: 1024px) {
-  h1 {
-    color: black
-  }
-
-
   .navbar {
     padding: 10px;
     display: flex;
@@ -557,7 +566,8 @@ footer {
   }
 
   .menu-page .card {
-    width: 50%;
+    width: 90%;
+    max-width: 1200px;
   }
 
   .contact-page .card {
