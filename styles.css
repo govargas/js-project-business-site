@@ -23,12 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  /* Fully transparent */
-  /* background: rgba(239, 231, 221, 0); */
-  /* background: #EFE7DD; */
-  /* Semi-transparent background */
-  background: rgba(0, 0, 0, 0.4); 
-  /* Optional: Adds a glass effect */
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -46,28 +41,21 @@ body {
   color: #f1eae2;
   flex-grow: 1;
   text-align: center;
-  /* Center the text */
   white-space: nowrap;
-  /* Prevent text from wrapping to a new line */
 }
 
-/* CSS-made Flag container */
+/* Colombia flag styles */
 .colombiaflag {
   width: 100%;
   max-width: 30px;
-  /* Maximum width you want for the flag */
   aspect-ratio: 3 / 2;
-  /* Maintains a 3:2 width-to-height ratio */
   height: auto;
-  /* Let the aspect ratio control the height */
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid black;
-  /* Optional: for a defined boundary, not sure if I like it like that */
 }
 
-/* Three color stripes */
 .colombiaflag div {
   width: 100%;
   height: 33.33%;
@@ -75,36 +63,64 @@ body {
 
 .colombiaflag .yellow {
   background: #FFD700;
-  /* Yellow */
   height: 50%;
-  /* Takes 50% of the flag */
 }
 
 .colombiaflag .blue {
   background: #0033A0;
-  /* Blue */
 }
 
 .colombiaflag .red {
   background: #CE1126;
-  /* Red */
 }
 
-/* Hide nav-links by default (for mobile view) */
+/* Hamburger menu icon */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background: #f1eae2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transform hamburger icon to an "X" when open */
+.menu-icon.open span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Navigation links - hidden by default with slide effect */
 .nav-links {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
-  top: 50px;
+  top: 60px;
   right: 0;
-  /* background: #000000; */
-  /* Semi-transparent background */
-  background: rgba(0, 0, 0, 0.7);  
-  /* Optional: Adds a glass effect */
-  /* backdrop-filter: blur(5px); */
+  background: rgba(0, 0, 0, 0.95);
   width: 50%;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-links.active {
+  transform: translateX(0);
 }
 
 .nav-links a {
@@ -120,23 +136,9 @@ body {
   text-align: center;
 }
 
-/* Hamburger menu icon */
-.menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-  user-select: none;
-  color: #f1eae2;
-}
-
-/* Hide checkbox (used for CSS-only menu toggle) */
-.menu-checkbox {
-  display: none;
-}
-
-/* Toggle the menu when the checkbox is checked */
-.menu-checkbox:checked+.menu-icon+.nav-links {
-  display: flex;
-}
+/* Remove any rules for the old checkbox-based toggle */
+/* .menu-checkbox { display: none; } */
+/* .menu-checkbox:checked+.menu-icon+.nav-links { display: flex; } */
 
 h1 {
   color: black;
@@ -520,7 +522,6 @@ footer {
   }
 }
 
-
 /* Desktops, large screens */
 @media (min-width: 1024px) {
   .navbar {
@@ -530,10 +531,12 @@ footer {
     align-items: center;
   }
 
+  /* Hide the hamburger icon on desktop */
   .menu-icon {
     display: none;
   }
 
+  /* Navigation links display inline without slide effect on desktop */
   .nav-links {
     font-family: "Urbanist", serif;
     font-optical-sizing: auto;
@@ -546,6 +549,8 @@ footer {
     width: auto;
     padding: 0;
     box-shadow: none;
+    transform: none; /* Remove any transforms set for mobile */
+    transition: none;
   }
 
   .nav-links a {
@@ -575,5 +580,4 @@ footer {
     max-width: 900px;
     padding: 40px;
   }
-
 }
