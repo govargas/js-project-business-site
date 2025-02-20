@@ -88,12 +88,12 @@ body {
   height: 3px;
   margin: 4px 0;
   background: #f1eae2;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 /* Transform hamburger icon to an "X" when open */
 .menu-icon.open span:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
+  transform: translateY(11px) rotate(-45deg);
 }
 
 .menu-icon.open span:nth-child(2) {
@@ -101,7 +101,7 @@ body {
 }
 
 .menu-icon.open span:nth-child(3) {
-  transform: translateY(-11px) rotate(-45deg);
+  transform: translateY(-11px) rotate(45deg);
 }
 
 /* Navigation links - hidden by default with slide effect */
