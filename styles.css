@@ -432,7 +432,8 @@ h3 {
   cursor: pointer;
 }
 
-.newsletter {
+.newsletter,
+.policy-terms-of-use {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -445,6 +446,13 @@ h3 {
   width: 16px; /* Ensures a proper checkbox size */
   height: 16px;
   flex-shrink: 0; /* Prevents the checkbox from shrinking */
+}
+
+.policy-terms-of-use input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 /* Black submit button */
