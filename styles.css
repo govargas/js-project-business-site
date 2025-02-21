@@ -254,13 +254,13 @@ h2 {
 
 .card.main-card h2 {
   font-size: 4em; /* Adjust to your desired size, e.g. 48px */
-  color: #f1eae2;;   /* Ensures the title is white */
+  color: #f1eae2;   /* Ensures the title is white */
   margin-bottom: 20px; /* Adds some space below the title */
 }
 
 .card.main-card p {
   font-size: 1.5em; /* Increase this value as needed for larger text */
-  color: #f1eae2;;     /* Ensures the paragraph text is white */
+  color: #f1eae2;     /* Ensures the paragraph text is white */
 }
 
 /* Card styling */
@@ -367,7 +367,7 @@ h3 {
 }
 
 .contact-form label {
-  display: block;
+  display: flex;
   text-align: left;  /* Aligns the text to the left */
   font-family: "Host Grotesk", sans-serif;
   font-size: 1rem;
@@ -413,6 +413,7 @@ h3 {
 
 .inquiry-type legend {
   font-weight: 600;
+  text-align: left;
   margin-bottom: 5px;
 }
 
@@ -424,7 +425,11 @@ h3 {
 }
 
 .inquiry-type input[type="radio"] {
-  margin-right: 5px;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: #534535;
+  cursor: pointer;
 }
 
 .newsletter {
@@ -457,6 +462,24 @@ h3 {
 
 .submit-button:hover {
   background-color: #333; /* Darker shade of black on hover */
+}
+
+.card-terms-and-policy {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Aligns vertically */
+  width: 100%;
+  max-width: 100vw; /* Ensures it never overflows */
+  padding: 0 10px; /* Adds small padding to prevent right-side clipping */
+  box-sizing: border-box;
+}
+
+.terms,
+.privacy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px;
 }
 
 footer {
@@ -554,6 +577,10 @@ body.dark-mode .submit-button {
 
 body.dark-mode .submit-button:hover {
   background-color: #ccc; /* Choose a hover color that contrasts with #f1eae2 */
+}
+
+body.dark-mode .terms {
+  background: #222;
 }
 
 /* Footer */
