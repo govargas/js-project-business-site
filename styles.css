@@ -171,8 +171,9 @@ h2 {
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
+  padding-top: 60px;
 }
 
 /* Background Video */
@@ -212,8 +213,8 @@ h2 {
 .cards-container {
   display: grid;
   gap: 20px;
-  padding: 20px;
-  padding-top: 80px;
+  padding: 40px 20px;
+  padding-top: 20px;
   opacity: 1;
   grid-template-columns: 1fr;
   /* Default: One column (Mobile) */
@@ -266,14 +267,103 @@ h2 {
 /* Card styling */
 .card {
   background: #f1eae2;
+  padding: 20px;
+  text-align: center;
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  border-radius: 1px;
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.main-card-wrapper {
+  position: relative;
+  z-index: 1; /* Ensures the card stays above the video and overlay */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card styling */
+.card-menu {
+  background: #FFCC00;
   /* Same as body background */
   padding: 20px;
   opacity: 88%;
   text-align: center;
   font-family: "Host Grotesk", serif;
   font-weight: 600;
-  border-radius: 1px;
-  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px 10px rgba(255, 255, 0, 0.5);
+}
+
+.card-products {
+  background: #FFCC00;
+  /* Same as body background */
+  padding: 20px;
+  opacity: 88%;
+  text-align: center;
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px 10px rgba(255, 255, 0, 0.5);
+}
+
+.card-gallery {
+  background: #011589;
+  /* Same as body background */
+  padding: 20px;
+  opacity: 88%;
+  text-align: center;
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px 10px rgba(0, 145, 255, 0.7);
+}
+
+.card-gallery h3 {
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #f1eae2;
+}
+
+.card-contact {
+  background: #CE1126;
+  /* Same as body background */
+  padding: 20px;
+  opacity: 88%;
+  text-align: center;
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px 10px rgba(255, 20, 60, 0.8)
+}
+
+.card-contact h3 {
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #f1eae2;
+}
+
+
+
+.card-text-blue-card {
+  font-family: "Host Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 200 !important;
+  font-style: normal;
+  line-height: 1.5;
+  margin-top: 10px;
+  /* Optional: adds spacing between the title and text */
+  color: #f1eae2;
+  /* Adjust color if necessary */
+}
+
+.card-text-blue-card a {
+  color: inherit;
+  /* Keeps the text color the same as surrounding text */
+  text-decoration: none;
+  /* Optional: Ensures no underline */
 }
 
 .card-text {
@@ -338,6 +428,13 @@ h3 {
   font-family: "Host Grotesk", serif;
   font-weight: 600;
   font-size: 24px;
+}
+
+h4 {
+  font-family: "Host Grotesk", serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #f1eae2;
 }
 
 .menu-page .hero {
@@ -538,6 +635,10 @@ body.dark-mode {
 
 /* Cards and similar elements */
 body.dark-mode .card,
+body.dark-mode .card-menu,
+body.dark-mode .card-products,
+body.dark-mode .card-gallery,
+body.dark-mode .card-contact,
 body.dark-mode .menu-page .card,
 body.dark-mode .contact-page .card {
   background: #222;
@@ -682,6 +783,42 @@ body.dark-mode footer {
     background-position: top center;
     /* Show full image on desktop */
   }
+
+  .card.main-card {
+    display: flex;
+    flex-direction: row;   /* Ensure the columns are in a row */
+    align-items: center;
+    width: 100vw;          /* Use full viewport width */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Remove any fixed flex widths so they take natural width */
+  .main-card-left {
+    /* No flex: 1, so it only takes as much space as needed */
+    margin: 5%; 
+    text-align: left;
+    width: 600px;
+  }
+
+  .card.main-card h2 {
+    font-size: 5.6em;
+    color: #f1eae2;
+  }
+
+  .card.main-card h2 .colombia {
+    font-size: 8rem;
+    color: #f1eae2;
+  }
+
+  .main-card-right {
+    margin: 5%;
+    margin-left: auto;
+    align-items: end;
+    text-align: right;
+    width: 60%;
+  }
+
 
   .cards-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
