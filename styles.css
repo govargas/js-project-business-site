@@ -254,6 +254,7 @@ h2 {
   color: #f1eae2;
   margin-bottom: 20px;
   letter-spacing: 0.01em;
+  font-optical-sizing: none;
 }
 
 .card.main-card p {
