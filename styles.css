@@ -19,7 +19,7 @@ body {
 
 /* Navbar setup */
 .navbar {
-  padding: 0 10px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -239,6 +239,8 @@ h2 {
 
 .card.main-card h2 {
   font-size: 4em;
+  font-kerning: none;
+  letter-spacing: normal;
   color: #f1eae2;
   margin-bottom: 20px;
   letter-spacing: 0.01em;
@@ -766,7 +768,6 @@ body.dark-mode footer {
 @media (min-width: 1024px) {
   /* Adjust the navbar to allow centering of the title */
   .navbar {
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
