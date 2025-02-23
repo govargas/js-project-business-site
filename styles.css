@@ -239,7 +239,7 @@ h2 {
 
 .card.main-card h2 {
   font-size: 2.7em;
-  font-kerning: none;
+  font-kerning: auto;
   letter-spacing: 0;
   color: #f1eae2;
   margin-top: 20px;
