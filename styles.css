@@ -249,6 +249,8 @@ h2 {
 
 .card.main-card p {
   font-size: 1.5em; /* Increase this value as needed for larger text */
+  font-kerning: none;
+  letter-spacing: normal;
   color: #f1eae2;     /* Ensures the paragraph text is white */
 }
 
