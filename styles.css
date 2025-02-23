@@ -238,19 +238,17 @@ h2 {
 }
 
 .card.main-card h2 {
-  font-size: 4em;
+  font-size: 2.7em;
   font-kerning: none;
-  letter-spacing: normal;
+  letter-spacing: 0;
   color: #f1eae2;
+  margin-top: 20px;
   margin-bottom: 20px;
-  letter-spacing: 0.01em;
   font-optical-sizing: none;
 }
 
 .card.main-card p {
   font-size: 1.5em; /* Increase this value as needed for larger text */
-  font-kerning: none;
-  letter-spacing: normal;
   color: #f1eae2;     /* Ensures the paragraph text is white */
 }
 
