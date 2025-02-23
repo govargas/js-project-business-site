@@ -19,10 +19,10 @@ body {
 
 /* Navbar setup */
 .navbar {
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   position: fixed;
@@ -42,6 +42,7 @@ body {
   flex-grow: 1;
   text-align: center;
   white-space: nowrap;
+      margin: 0;
 }
 
 /* Colombia flag styles */
@@ -86,7 +87,7 @@ body {
   display: block;
   width: 25px;
   height: 3px;
-  margin: 4px 0;
+  margin: 3px 0;
   background: #f1eae2;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
@@ -169,7 +170,6 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 60px;
 }
 
 /* Background Video */
@@ -213,24 +213,12 @@ h2 {
   padding-top: 20px;
   opacity: 1;
   grid-template-columns: 1fr;
-  /* Default: One column (Mobile) */
-  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
-  /* position: absolute; */
-  /* Use sticky instead of fixed */
-  /* top: 80px; */
-  /* Adjust so it sits just below the navbar */
 }
 
 .card.main-card {
   /* span across all columns */
   grid-column: 1 / -1;
-  /* transparent */
   background: transparent;
-  /* glass effect */
-  /* background: rgba(255, 255, 255, 0.1);  */
-  /* blur */
-  /* backdrop-filter: blur(10px);
-  color: rgb(255, 255, 255); */
   text-align: center;
   /* Center content vertically & horizontally */
   display: flex;
@@ -282,10 +270,9 @@ h2 {
 
 /* Card styling */
 .card-menu {
-  background: #FFCC00;
+  background: #ebad66;
   /* Same as body background */
   padding: 20px;
-  opacity: 88%;
   text-align: center;
   font-family: "Host Grotesk", serif;
   font-weight: 600;
@@ -295,10 +282,9 @@ h2 {
 }
 
 .card-products {
-  background: #FFCC00;
+  background: #ebba66;
   /* Same as body background */
   padding: 20px;
-  opacity: 88%;
   text-align: center;
   font-family: "Host Grotesk", serif;
   font-weight: 600;
@@ -308,10 +294,9 @@ h2 {
 }
 
 .card-gallery {
-  background: #011589;
+  background: #002FA7;
   /* Same as body background */
   padding: 20px;
-  opacity: 88%;
   text-align: center;
   font-family: "Host Grotesk", serif;
   font-weight: 600;
@@ -328,10 +313,9 @@ h2 {
 }
 
 .card-contact {
-  background: #CE1126;
+  background: #a90f21;
   /* Same as body background */
   padding: 20px;
-  opacity: 88%;
   text-align: center;
   font-family: "Host Grotesk", serif;
   font-weight: 600;
@@ -347,13 +331,16 @@ h2 {
   color: #f1eae2;
 }
 
-.card-menu:hover,
+.card-menu:hover {
+  box-shadow: 5px 10px 15px 10px rgb(255, 187, 0.8);
+}
+
 .card-products:hover {
-  box-shadow: 5px 10px 15px 10px rgba(255, 255, 0, 0.5);
+  box-shadow: 5px 10px 15px 10px rgba(255, 191, 0, 0.8);
 }
 
 .card-gallery:hover {
-  box-shadow: 5px 10px 15px 10px rgba(0, 145, 255, 0.7);
+  box-shadow: 5px 10px 15px 10px rgba(0, 145, 255, 0.8);
 }
 
 .card-contact:hover {
@@ -427,7 +414,6 @@ h2 {
 
 /* Make text inside the menu scrollable if necessary */
 .menu-page .card-text {
-  /* font-family: "Urbanist", sans-serif; */
   font-weight: 200;
   font-size: 18px;
   line-height: 1.5;
@@ -667,8 +653,19 @@ body.dark-mode .card-contact,
 body.dark-mode .menu-page .card,
 body.dark-mode .contact-page .card {
   background: #222;
-  box-shadow: 12px 12px 20px rgba(241,234,226,0.2);
   color: #f1eae2;
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Box-shadow on hover */
+body.dark-mode .card:hover,
+body.dark-mode .card-menu:hover,
+body.dark-mode .card-products:hover,
+body.dark-mode .card-gallery:hover,
+body.dark-mode .card-contact:hover,
+body.dark-mode .menu-page .card:hover,
+body.dark-mode .contact-page .card:hover {
+  box-shadow: 12px 12px 20px rgba(241, 234, 226, 0.6);
 }
 
 body.dark-mode .card.main-card {
@@ -767,11 +764,23 @@ body.dark-mode footer {
 
 /* Desktops, large screens */
 @media (min-width: 1024px) {
+  /* Adjust the navbar to allow centering of the title */
   .navbar {
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* if you still want it fixed */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Center the title in the navbar */
+  .titel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-grow: 0;
   }
 
   /* Hide the hamburger icon on desktop */
@@ -809,18 +818,17 @@ body.dark-mode footer {
     /* Show full image on desktop */
   }
 
+  /* Main card layout – these rules are unchanged from your working code */
   .card.main-card {
     display: flex;
-    flex-direction: row;   /* Ensure the columns are in a row */
+    flex-direction: row;   /* Two columns side by side */
     align-items: center;
     width: 100vw;          /* Use full viewport width */
     padding: 20px;
     box-sizing: border-box;
   }
   
-  /* Remove any fixed flex widths so they take natural width */
   .main-card-left {
-    /* No flex: 1, so it only takes as much space as needed */
     margin: 5%; 
     text-align: left;
     width: 600px;
@@ -862,6 +870,7 @@ body.dark-mode footer {
   .dark-mode-toggle-mobile {
     display: none;
   }
+
   .dark-mode-toggle-desktop {
     display: inline-block;
   }
