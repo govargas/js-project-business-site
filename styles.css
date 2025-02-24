@@ -193,7 +193,7 @@ h2 {
   height: 100%;
   object-fit: cover; /* Ensures the image covers the hero area */
   transform: translate(-50%, -50%);
-  z-index: -1; /* Places the image behind your content */
+  z-index: -1; /* Places the image behind content */
 }
 
 /* Optional: Overlay for better contrast */
@@ -726,7 +726,7 @@ body.dark-mode footer {
 /* --- Dark Mode Toggle Icons --- */
 .dark-mode-toggle-mobile,
 .dark-mode-toggle-desktop {
-  width: 1rem; /* Same size as the Instagram icon in your footer */
+  width: 1rem; /* Same size as the Instagram icon in footer */
   height: 1rem;
   cursor: pointer;
 }
@@ -819,7 +819,7 @@ body.dark-mode footer {
     /* Show full image on desktop */
   }
 
-  /* Main card layout – these rules are unchanged from your working code */
+  /* Main card layout – these rules are unchanged from working code */
   .card.main-card {
     display: flex;
     flex-direction: row;   /* Two columns side by side */
