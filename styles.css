@@ -265,7 +265,7 @@ h2 {
 
 .main-card-wrapper {
   position: relative;
-  z-index: 1; /* Ensures the card stays above the video and overlay */
+  z-index: 1;
   padding: 20px;
   text-align: center;
 }
@@ -273,7 +273,6 @@ h2 {
 /* Card styling */
 .card-menu {
   background: #ebad66;
-  /* Same as body background */
   padding: 20px;
   text-align: center;
   font-family: "Host Grotesk", serif;
@@ -285,7 +284,6 @@ h2 {
 
 .card-products {
   background: #ebba66;
-  /* Same as body background */
   padding: 20px;
   text-align: center;
   font-family: "Host Grotesk", serif;
@@ -297,7 +295,6 @@ h2 {
 
 .card-gallery {
   background: #002FA7;
-  /* Same as body background */
   padding: 20px;
   text-align: center;
   font-family: "Host Grotesk", serif;
@@ -316,7 +313,6 @@ h2 {
 
 .card-contact {
   background: #a90f21;
-  /* Same as body background */
   padding: 20px;
   text-align: center;
   font-family: "Host Grotesk", serif;
@@ -356,16 +352,14 @@ h2 {
   font-style: normal;
   line-height: 1.5;
   margin-top: 10px;
-  /* Optional: adds spacing between the title and text */
   color: #f1eae2;
-  /* Adjust color if necessary */
 }
 
 .card-text-blue-card a {
   color: inherit;
   /* Keeps the text color the same as surrounding text */
   text-decoration: none;
-  /* Optional: Ensures no underline */
+  /* Ensures no underline */
 }
 
 .card-text {
@@ -377,7 +371,6 @@ h2 {
   margin-top: 10px;
   /* Optional: adds spacing between the title and text */
   color: black;
-  /* Adjust color if necessary */
 }
 
 .card-text a {
@@ -482,7 +475,7 @@ h4 {
   border: 1px solid #ccc;
   border-radius: 5px;
   background: white;
-  display: block; /* Forces each input to take up its own line */
+  display: block;
   margin-bottom: 15px; /* Adds space between fields */
 }
 
@@ -495,7 +488,7 @@ h4 {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border: 2px solid #FF7F50;       /* Change border color (e.g., coral) */
+  border: 2px solid #FF7F50;       /* Change border color */
   background-color: #f1eae2;        /* Change background color when activated */
   box-shadow: 0 0 8px rgba(255, 127, 80, 0.6); /* Glow effect */
   transition: all 0.3s ease;        /* Smooth transition for the effect */
@@ -733,7 +726,7 @@ body.dark-mode footer {
 
 .dark-mode-toggle-mobile {
   display: block;
-  margin-right: 10px; /* Adjust spacing as needed */
+  margin-right: 10px;
 }
 
 .dark-mode-toggle-desktop {
@@ -766,12 +759,11 @@ body.dark-mode footer {
 
 /* Desktops, large screens */
 @media (min-width: 1024px) {
-  /* Adjust the navbar to allow centering of the title */
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* if you still want it fixed */
+    position: fixed;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
   }
